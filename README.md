@@ -23,7 +23,13 @@ proto/
 4 directories, 0 files
 ```
 
-> WARNING: I went in and **hand modified** the `.proto` files. Horrific. I know. The reason is that the `xla` dependency is now considered a `third_party` import in modern `tensorflow` protobuf definitions. This means that in order for your code to compile **you will need to modify all instances of `xla/tsl/...` to `third_party/xla/xla/tsl/...`**. This can be done by hand (tediously) or with a fancy grep call (recommended).
+> **⚠ WARNING ⚠**: I went in and **hand modified** the `.proto` files. 
+> 
+> Horrific. I know. 
+> 
+> The reason is that the `xla` dependency is now considered a `third_party` import in modern `tensorflow` protobuf definitions. 
+> 
+> This means that in order for your code to compile **you will need to modify all instances of `xla/tsl/...` to `third_party/xla/xla/tsl/...`**. This can be done by hand (tediously) or with a fancy grep call (recommended).
 
 Second, compile your protobuf with the `build.rs` script.
 
